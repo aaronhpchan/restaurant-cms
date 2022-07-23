@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html, body{
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #212529;
+}
+
+* {
+    font-family: 'Azeret Mono', monospace;
+    background-color: #ffc1cc;
+}
+
+.logo {
+    width: 4em;
+    transform: rotate(-5deg);
+}
+
+.brand {
+    font-size: 275%;
+    text-shadow: 3.5px 4.25px #fffafa;
+}
+
+.brand-small {
+    font-size: 120%;
+    text-shadow: 1.75px 2.125px #fffafa;
+}
+
+
+.brand, .brand-small, .page-title, h2, .marquee {
+    font-family: 'Dela Gothic One', sans-serif;
+}
+
+.marker {
+    font: 300% 'Permanent Marker', cursive;
+    margin: 0;
+    text-shadow: 5.5px 5px #fffafa;
+} 
+
+.brand::selection, .brand-small::selection, .marker::selection {
+    text-shadow: none;
+}
+.nav-item {
+    font-weight: 600;
+    font-size: 150%;
+}
+
+.nav-btn:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+.nav-btn:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.img, .spinning-circle {
+    border: 2px ridge #354230;
+    border-bottom: 3px groove #555555;
+}
+
+.img {
+    border-radius: 55px;
+    border-right: 3px groove #555555;
+    width: 100%;
+}
+
+.img, .map-container {
+    box-shadow: 1.5px 3.5px #3b3c36;
+}
+
+.img-container, .circle {
+    position: relative;
+}
+
+.spinning-circle {
+    border-radius: 50%;
+    box-shadow: 1.5px 3.5px 3.5px #3b3c36;
+    position: absolute;
+    width: 36%;
+    aspect-ratio: 1/1;
+    animation: spinning-circle 9s ease-in-out 0s infinite alternate;
+}
+
+.spinning-circle > div {
+    max-width: 80%;
+    max-height: 15%;
+    display: inline-block;
+}
+
+.yellow-circle {
+    right: 2.5%;
+    bottom: 10%;
+}
+
+.green-circle {
+    left: 2.5%;
+    top: 10%;
+}
+
+.yellow-circle, .yellow-circle *, .confirm-msg {
+    background-color: #faf0b2;
+}
+
+.green-circle, .green-circle * {
+    background-color: #d0f0c0;
+}
+
+@keyframes spinning-circle {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.marquee-section, .marquee-section-reverse {
+    position: relative;
+    min-height: 82px;
+}
+
+.marquee-section {
+    transform: rotate(-1.75deg);
+}
+
+.marquee-section-reverse {
+    transform: rotate(1.75deg);
+}
+
+.marquee-section, .marquee-section *, .marquee-section-reverse, .marquee-section-reverse * {
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+}
+
+.marquee-div {
+    position: absolute;
+    animation: move linear 37.5s infinite;
+    min-width: 100%;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.border-dashed {
+    border: 2px dashed;
+}
+
+.donut, .donut-hole {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    padding: 15%;
+}
+
+.donut {
+    background-color: #ffdbe1;
+}
+
+.border-radius-rounded {
+    border-radius: 27.5px;
+}
+
+.menu > div {
+    font-weight: 400;
+    line-height: 3;
+    border-bottom: 2px dashed;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fab, ::selection, .add-cart {
+    color: #fffafa;
+}
+
+.fab:hover {
+    color: #ffc1cc;
+}
+
+.scroll {
+    background-color: #fdf9e0;
+    border-radius: 50%;
+    width: max(2rem, 5vw);
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: calc(max(2rem, 5vw) / 2);
+    bottom: calc(max(2rem, 5vw) / 2);
+    cursor: pointer;
+}
+
+.scroll:hover {
+    background-color: #4e5861;
+    color: #fdf9e0;
+    box-shadow: 0.5px 2.25px #fdf9e0;
+}
+
+.about-p {
+    font-size: 105%;
+}
+
+.map-container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2.25%;
+} 
+
+.map-container * {
+    background-color: transparent;
+} 
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-btn {
+    font-size: 110%;
+    font-weight: 600;
+    letter-spacing: 0.03125em;
+}
+
+.form-btn:hover, .nav-item:hover, .active {
+    background-color: #fff5ee;
+    box-shadow: 0 3.5px #3b3c36;
+}
+
+input, textarea, .form-btn, .confirm-msg {
+    width: 100%;
+}
+
+input, textarea, .form-btn, .nav-item, .card-light, .confirm-msg {
+    border-radius: 15px;
+}
+
+form, textarea, .vertical-img {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.confirm-msg {
+    display: none;
+}
+
+.fa-shopping-cart, .cart-qty {
+    color: #36454f;
+}
+
+.card-light, .card-light * {
+    background-color: #ffdbe1;
+}
+
+.card-light {
+    border: 0.5px solid #354230;
+}
+
+.card-light:hover {
+    border: 2px ridge #354230;
+    border-bottom: 3px groove #555555;
+    border-right: 3px groove #555555;
+    box-shadow: 1.5px 3.5px #3b3c36;
+}
+
+.card-light-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {   
+    margin: calc(100vh / 3) auto;
+    padding: 20px;
+    max-width: min(670px, 70%);   
+}
+
+.modal-content, .modal-content * {
+    background-color: #fff;
+}
+  
+.close {
+    position: absolute;
+    top: 5px;
+    right: 12.5px;
+    color: #6c757d;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #212529;
+    text-decoration: none;
+}
+
+.card-light, .cart-div, .fa-minus-circle, .fa-plus-circle, .close {
+    cursor: pointer;
+}
+
+.add-cart {
+    background-color: #212529;
+    box-shadow: 0 0 2px #434b53;
+}
+
+.add-cart:hover {
+    background-color: #ffc1cc;
+    border: solid #ffc1cc;
+    color: #212529;
+    font-weight: 600;
+    box-shadow: 0 0 2px #ff758d;
+}
+
+@media screen and (max-width: 360px) {
+    .spinning-circle > div {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-p {
+        font-size: 75%;
+    }
+    .menu > div {
+        line-height: 1.9;
+        border-bottom: 1.75px dashed;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .spinning-circle > div {
+        font-size: 145%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .marker {
+        font-size: 250%;
+        text-shadow: 4.25px 4px #fffafa;
+    }
+    .nav-item {
+        font-size: 115%;
+    }
+    .brand-small {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .brand {
+        font-size: 200%;
+    }
+    .logo {
+        width: 3.2em;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .brand {
+        font-size: 225%;
+    }
+    .logo {
+        width: 3.6em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .vertical-img {
+        max-width: 75%;
+    }
+}
+
+
+
+
+
+

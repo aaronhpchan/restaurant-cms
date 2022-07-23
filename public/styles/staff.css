@@ -1,0 +1,44 @@
+.header {
+    background-color: #dcf1ff;
+}
+
+.sub-header {
+    background-color: #f5fbff;
+}
+
+.sub-header li a {
+    text-decoration: none;
+}
+
+.table-responsive {
+    max-width: 90vw;
+}
+
+td, th {
+    padding-right: 20px;
+}
+
+form {
+    width: 350px;
+}
+
+.attributes {
+    width: min(90%, 350px);
+}
+
+.attributes-product {
+    width: min(90%, 450px);
+}
+
+@media screen and (max-width: 360px) {
+    form {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    td, th {
+        padding-right: 10px;
+    }
+}
+
