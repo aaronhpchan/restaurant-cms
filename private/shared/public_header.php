@@ -19,7 +19,7 @@
 <body>
     <?php if($page_id == '' || $page['menu_name'] != 'Order') { ?>
     <div> 
-        <div class="container-md d-flex align-items-center justify-content-sm-center py-3">
+        <div class="container-md px-3 px-md-0 d-flex align-items-center justify-content-sm-center py-3">
             <a href="<?php echo url_for('index.php'); ?>" class="text-reset text-decoration-none">
                 <img src="<?php echo url_for('/images/apple-touch-icon.png'); ?>" class="d-inline-block align-top logo"alt="Logo" />
                 <span class="d-none d-sm-inline brand">Humphrey's Doughnuts</span>
@@ -29,7 +29,7 @@
     </div>
     <?php } else { ?>
     <div>
-        <div class="container-md d-flex align-items-center justify-content-between py-3">
+        <div class="container-md px-3 px-md-0 d-flex align-items-center justify-content-between py-3">
             <a href="<?php echo url_for('index.php'); ?>" class="text-reset text-decoration-none d-flex align-items-center">
                 <img src="<?php echo url_for('/images/apple-touch-icon.png'); ?>" class="d-inline-block align-top me-2 logo"alt="Logo" />
                 <span class="d-inline-block brand-small">Humphrey's<br />Doughnuts</span>

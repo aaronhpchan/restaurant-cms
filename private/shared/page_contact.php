@@ -2,11 +2,11 @@
 
 $id = $_GET['id'] ?? '1'; 
 
-$subject_set = find_subjects_by_page($id);
+$subject_set = find_subjects_by_page($id, ['visible' => true]);
 
 ?>     
 
-<div class="container-md">
+<div class="container-md px-3 px-md-0">
     <div class="row align-items-center py-5">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="map-container border border-2 border-dark"></div>

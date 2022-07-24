@@ -2,11 +2,11 @@
 
 $id = $_GET['id'] ?? '1'; 
 
-$subject_set = find_subjects_by_page($id);
+$subject_set = find_subjects_by_page($id, ['visible' => true]);
 
 ?> 
 
-<div class="container-md">
+<div class="container-md px-3 px-md-0">
     <h1 class="page-title display-3 text-center py-5"><?php echo $page['menu_name']; ?></h1>
 
     <?php foreach($subject_set as $i => $value) { ?>

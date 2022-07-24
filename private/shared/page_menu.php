@@ -1,6 +1,6 @@
-<?php $subject_set = find_all_product_types(); ?>
+<?php $subject_set = find_all_product_types(['visible' => true]); ?>
 
-<div class="container-md mb-5">
+<div class="container-md px-3 px-md-0 mb-5">
     <h1 class="page-title display-3 pt-5 pb-4"><?php echo $page['menu_name']; ?></h1>
 
     <?php foreach($subject_set as $i => $subject) { ?>

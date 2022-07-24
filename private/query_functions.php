@@ -1,16 +1,21 @@
 <?php
     /* PAGES */
-    function find_all_pages() {
+    function find_all_pages($options=[]) {
         global $db;
-        $sql = "SELECT * FROM pages ORDER BY position ASC";
+        $visible = $options['visible'] ?? false;
+        $sql = "SELECT * FROM pages ";
+        if($visible) { $sql .= "WHERE visible = true "; }
+        $sql .= "ORDER BY position ASC";
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
         return $result;
     }
 
-    function find_page_by_id($id) {
+    function find_page_by_id($id, $options=[]) {
         global $db;
-        $sql = "SELECT * FROM pages WHERE id='" . db_escape($db, $id) . "'";
+        $visible = $options['visible'] ?? false;
+        $sql = "SELECT * FROM pages WHERE id='" . db_escape($db, $id) . "' ";
+        if($visible) { $sql .= "AND visible = true"; }
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
         $page = mysqli_fetch_assoc($result);
@@ -110,9 +115,12 @@
     }
     
     /* SUBJECTS */
-    function find_all_subjects() {
+    function find_all_subjects($options=[]) {
         global $db;
-        $sql = "SELECT * FROM subjects ORDER BY page_id ASC, position ASC";
+        $visible = $options['visible'] ?? false;
+        $sql = "SELECT * FROM subjects ";
+        if($visible) { $sql .= "WHERE visible = true "; }
+        $sql .= "ORDER BY page_id ASC, position ASC";
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
         return $result;
@@ -128,17 +136,23 @@
         return $subject; // returns an assoc array, not a result set
     }
 
-    function find_subjects_by_page($page_id) {
+    function find_subjects_by_page($page_id, $options=[]) {
         global $db;
-        $sql = "SELECT * FROM subjects WHERE page_id='" . db_escape($db, $page_id) . "' ORDER BY position ASC";
+        $visible = $options['visible'] ?? false;
+        $sql = "SELECT * FROM subjects WHERE page_id='" . db_escape($db, $page_id) . "' ";
+        if($visible) { $sql .= "AND visible = true "; }
+        $sql .= "ORDER BY position ASC";
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
         return $result;
     }
 
-    function find_all_product_types() {
+    function find_all_product_types($options=[]) {
         global $db;
-        $sql = "SELECT * FROM subjects WHERE product_type='1' ORDER BY page_id ASC, position ASC";
+        $visible = $options['visible'] ?? false;
+        $sql = "SELECT * FROM subjects WHERE product_type='1' ";
+        if($visible) { $sql .= "AND visible = true "; }
+        $sql .= "ORDER BY page_id ASC, position ASC";
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
         return $result;

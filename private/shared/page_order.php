@@ -1,6 +1,6 @@
-<?php $subject_set = find_all_product_types(); ?> 
+<?php $subject_set = find_all_product_types(['visible' => true]); ?> 
 
-<div class="container-md mb-5">
+<div class="container-md px-3 px-md-0 mb-5">
     <?php while($subject = mysqli_fetch_assoc($subject_set)) { ?>
         <h2 class="display-6 pt-5"><?php echo h($subject['menu_name']); ?></h2>
         
