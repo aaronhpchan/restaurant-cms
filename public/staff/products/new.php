@@ -37,7 +37,9 @@ mysqli_free_result($product_set);
 <?php $page_title = 'Create Product'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<a href="<?php echo url_for('/staff/products/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to List</a>
+<div>
+    <a href="<?php echo url_for('/staff/products/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to List</a>
+</div>
 <div class="m-auto mb-4">
     <?php echo display_errors($errors); ?>
 

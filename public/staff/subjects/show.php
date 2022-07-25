@@ -11,7 +11,9 @@ $subject = find_subject_by_id($id);
 <?php $page_title = h($subject['menu_name']); ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<a href="<?php echo url_for('/staff/subjects/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to List</a>
+<div>
+    <a href="<?php echo url_for('/staff/subjects/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to List</a>
+</div>
 <div class="attributes mx-auto">
     <h2 class="my-3 text-center">Subject: <?php echo h($subject['menu_name']); ?></h2>
     <div class="mx-auto">

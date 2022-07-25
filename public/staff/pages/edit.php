@@ -35,7 +35,9 @@ mysqli_free_result($page_set);
 <?php $page_title = 'Edit Page'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<a href="<?php echo url_for('/staff/pages/index.php'); ?>" class="ps-3 text-decoration-none">&laquo; Back to List</a>
+<div>
+    <a href="<?php echo url_for('/staff/pages/index.php'); ?>" class="ps-3 text-decoration-none">&laquo; Back to List</a>
+</div>
 <div class="m-auto">
     <?php echo display_errors($errors); ?>
     

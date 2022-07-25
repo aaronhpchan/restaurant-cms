@@ -11,7 +11,9 @@ $product = find_product_by_id($id);
 <?php $page_title = 'Show Product'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<a href="<?php echo url_for('/staff/products/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to List</a>    
+<div>
+    <a href="<?php echo url_for('/staff/products/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to List</a>   
+</div> 
 <div class="attributes-product mx-auto">
     <h2 class="my-3 text-center">Product: <?php echo h($product['menu_name']); ?></h2>
     <div class="mx-auto">

@@ -5,7 +5,9 @@
 <?php $page_title = 'Products'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<div><a href="<?php echo url_for('/staff/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to Main Menu</a></div>
+<div>
+    <a href="<?php echo url_for('/staff/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to Main Menu</a>
+</div>
 <div class="mx-auto px-3">
     <h2 class="text-center">Products</h2>
     <a href="<?php echo url_for('/staff/products/new.php'); ?>" class="text-decoration-none">Create New Product</a>
@@ -20,7 +22,6 @@
                     <th>Name</th>
                 </tr>
             </thead>
-
             <tbody>
             <?php while($product = mysqli_fetch_assoc($product_set)) { ?>
                 <?php $subject = find_subject_by_id($product['subject_id']); ?>

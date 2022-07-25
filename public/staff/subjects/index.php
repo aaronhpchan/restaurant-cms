@@ -5,7 +5,9 @@
 <?php $page_title = 'Subjects'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<a href="<?php echo url_for('/staff/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to Main Menu</a>
+<div>
+    <a href="<?php echo url_for('/staff/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to Main Menu</a>
+</div>
 <div class="m-auto px-3">
     <h2 class="text-center">Subjects</h2>
     <a href="<?php echo url_for('/staff/subjects/new.php'); ?>" class="text-decoration-none">Create New Subject</a>
@@ -21,7 +23,6 @@
                     <th>Name</th>
                 </tr>
             </thead>
-
             <tbody>
             <?php while($subject = mysqli_fetch_assoc($subject_set)) { ?>
                 <?php $page = find_page_by_id($subject['page_id']); ?>

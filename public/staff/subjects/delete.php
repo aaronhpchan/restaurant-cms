@@ -19,7 +19,9 @@ if(is_post_request()) {
 <?php $page_title = 'Delete Subject'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<a href="<?php echo url_for('/staff/subjects/index.php'); ?>" class="ps-3 text-decoration-none">&laquo; Back to List</a>
+<div>
+    <a href="<?php echo url_for('/staff/subjects/index.php'); ?>" class="ps-3 text-decoration-none">&laquo; Back to List</a>
+</div>
 <div class="m-auto">
     <h2 class="mb-3 text-center">Delete Subject</h2>
     <p class="text-center">Are you sure you want to delete this subject?</p>

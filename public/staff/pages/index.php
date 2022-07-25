@@ -5,7 +5,9 @@
 <?php $page_title = 'Pages'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-<a href="<?php echo url_for('/staff/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to Main Menu</a>
+<div>
+    <a href="<?php echo url_for('/staff/index.php'); ?>" class="ms-3 text-decoration-none">&laquo; Back to Main Menu</a>
+</div>
 <div class="m-auto px-3">
     <h2 class="text-center">Pages</h2>
     <a href="<?php echo url_for('/staff/pages/new.php'); ?>" class="text-decoration-none">Create New Page</a>
@@ -19,7 +21,6 @@
                     <th>Name</th>
                 </tr>
             </thead>
-
             <tbody>
             <?php while($page = mysqli_fetch_assoc($page_set)) { ?>
                 <tr>
