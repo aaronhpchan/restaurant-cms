@@ -1,6 +1,6 @@
 <nav>
     <div class="container-md px-3 px-md-0 pt-2 pb-3">
-        <?php $nav_pages = find_all_pages(['visible' => true]); ?>
+        <?php $nav_pages = find_all_pages(['visible' => $visible]); ?>
         <div class="row pages"> 
             <?php while($nav_page = mysqli_fetch_assoc($nav_pages)) { ?>
             <div class="col-6 col-lg-3 nav-btn">

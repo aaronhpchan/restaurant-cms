@@ -1,4 +1,9 @@
-<?php $page_id = $page_id ?? ''; // set default value to prevent error on index page ?>
+<?php 
+// set default value to prevent error on index page
+$page_id = $page_id ?? ''; 
+$visible = $visible ?? true;
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,5 +47,5 @@
     </div>
     <?php } ?>
 
-    <?php include(SHARED_PATH . '/public_navigation.php'); ?>
+    
     

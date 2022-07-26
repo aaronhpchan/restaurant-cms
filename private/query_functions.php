@@ -289,9 +289,12 @@
         return $product; // returns an assoc array, not a result set
     }
 
-    function find_products_by_subject($subject_id) {
+    function find_products_by_subject($subject_id, $options=[]) {
         global $db;
-        $sql = "SELECT * FROM products WHERE subject_id='" . db_escape($db, $subject_id) . "' ORDER BY position ASC";
+        $visible = $options['visible'] ?? false;
+        $sql = "SELECT * FROM products WHERE subject_id='" . db_escape($db, $subject_id) . "' ";
+        if($visible) { $sql .= "AND visible = true "; }
+        $sql .= "ORDER BY position ASC";
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
         return $result;

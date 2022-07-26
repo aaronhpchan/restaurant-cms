@@ -1,10 +1,10 @@
-<?php $subject_set = find_all_product_types(['visible' => true]); ?> 
+<?php $subject_set = find_all_product_types(['visible' => $visible]); ?> 
 
 <div class="container-md px-3 px-md-0 mb-5">
     <?php while($subject = mysqli_fetch_assoc($subject_set)) { ?>
         <h2 class="display-6 pt-5"><?php echo h($subject['menu_name']); ?></h2>
         
-        <?php $product_set = find_products_by_subject($subject['id']); ?>
+        <?php $product_set = find_products_by_subject($subject['id'], ['visible' => $visible]); ?>
         <div class="row pt-4">
             <?php foreach ($product_set as $value) { ?>
                 <div class="col-lg-6 mb-3">

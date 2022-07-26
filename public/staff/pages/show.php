@@ -32,4 +32,7 @@ $page = find_page_by_id($id);
             </tr>
         </tbody>
     </table>
+    <div>
+        <a href="<?php echo url_for('/index.php?id=' . h(u($page['id'])) . '&preview=true'); ?>" target="_blank" class="text-decoration-none">Preview</a>
+    </div>
 </div>

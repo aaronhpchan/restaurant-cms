@@ -2,7 +2,7 @@
 
 $id = $_GET['id'] ?? '1'; 
 
-$subject_set = find_subjects_by_page($id, ['visible' => true]);
+$subject_set = find_subjects_by_page($id, ['visible' => $visible]);
 
 ?> 
 

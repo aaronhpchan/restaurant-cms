@@ -3,7 +3,6 @@
 <?php 
 
 $id = $_GET['id'] ?? '1'; 
-
 $subject = find_subject_by_id($id);
 
 ?> 
@@ -34,10 +33,13 @@ $subject = find_subject_by_id($id);
             <dt>Visible</dt>
             <dd><?php echo $subject['visible'] == '1' ? 'true' : 'false'; ?></dd>
         </dl>
-        <dl class="mb-4">
+        <dl>
             <dt>Content</dt>
             <dd><?php echo $subject['content'] != '' ? h($subject['content']) : 'nil'; ?></dd>
         </dl>
+    </div>
+    <div class="mb-4">
+        <a href="<?php echo url_for('/index.php?id=' . h(u($subject['page_id'])) . '&preview=true'); ?>" target="_blank" class="text-decoration-none">Preview</a>
     </div>
 </div>
 

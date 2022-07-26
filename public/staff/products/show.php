@@ -3,8 +3,8 @@
 <?php 
 
 $id = $_GET['id'] ?? '1'; 
-
 $product = find_product_by_id($id);
+$menu_page = find_page_by_id(1);
 
 ?> 
 
@@ -43,6 +43,12 @@ $product = find_product_by_id($id);
             <dd><?php echo h($product['description']); ?></dd>
         </dl>
     </div>
+
+    <?php if($menu_page['menu_name'] == 'Menu') { ?>
+        <div>
+            <a href="<?php echo url_for('/index.php?id=1&preview=true'); ?>" target="_blank" class="text-decoration-none">Preview</a>
+        </div>
+    <?php } ?>
 </div>
 
 <?php include(SHARED_PATH . '/staff_footer.php'); ?>

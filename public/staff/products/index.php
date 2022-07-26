@@ -28,8 +28,8 @@
                 <tr>
                     <td><?php echo h($product['id']); ?></td>
                     <td><?php echo h($subject['menu_name']); ?></td>
-                    <td><?php echo h($product['position']); ?></td>
-                    <td><?php echo $product['visible'] == 1 ? 'true' : 'false'; ?></td>
+                    <td class="ps-3"><?php echo h($product['position']); ?></td>
+                    <td class="text-center"><?php echo $product['visible'] == 1 ? '&#10003;' : 'X'; ?></td>
                     <td><?php echo h($product['menu_name']); ?></td>
                     <td><a href="<?php echo url_for('/staff/products/show.php?id=' . h(u($product['id']))); ?>" class="text-decoration-none">View</a></td>
                     <td><a href="<?php echo url_for('/staff/products/edit.php?id=' . h(u($product['id']))); ?>" class="text-decoration-none">Edit</a></td>

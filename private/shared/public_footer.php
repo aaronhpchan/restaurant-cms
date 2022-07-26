@@ -1,4 +1,4 @@
-<?php $subject_set = find_subjects_by_page(3, ['visible' => true]); ?>   
+<?php $subject_set = find_subjects_by_page(3, ['visible' => $visible]); ?>   
 
 <footer class="navbar d-flex flex-column bg-dark py-5">
     <div class="bg-dark text-center">
