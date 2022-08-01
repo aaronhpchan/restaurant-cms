@@ -17,12 +17,13 @@
     <header class="header w-100 py-2">
         <h1 class="text-center"><a href="<?php echo url_for('/staff/index.php'); ?>" class="text-decoration-none text-black">Restaurant CMS</a></h1>
     </header>
-    <nav>
+    <nav class="overflow-auto">
         <ul class="sub-header d-flex justify-content-center w-100 py-2 border-bottom border-1 list-unstyled text-uppercase">
-            <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/index.php'); ?>">Home</a>
             <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/pages/index.php') ?>">Pages</a></li>
             <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/subjects/index.php') ?>">Subjects</a></li>
             <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/products/index.php') ?>">Products</a></li>
+            <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/logout.php'); ?>">Logout</a></li>
         </ul>
     </nav>
+    <?php echo display_session_messages(); ?>
     

@@ -14,6 +14,7 @@ if(is_post_request()) {
     $result = insert_product($product);
     if($result === true) {
         $new_id = mysqli_insert_id($db);
+        $_SESSION['message'] = 'Product has been created.'; // store message in the session
         redirect_to(url_for('/staff/products/show.php?id=' . $new_id));
     } else {
         $errors = $result;

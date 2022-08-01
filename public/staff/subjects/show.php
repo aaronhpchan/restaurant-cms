@@ -1,6 +1,6 @@
-<?php require_once('../../../private/initialize.php'); ?>
-
 <?php 
+
+require_once('../../../private/initialize.php'); 
 
 $id = $_GET['id'] ?? '1'; 
 $subject = find_subject_by_id($id);

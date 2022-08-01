@@ -17,6 +17,7 @@ if(is_post_request()) {
 
     $result = update_page($page);
     if($result === true) {
+        $_SESSION['message'] = 'Page has been updated.'; // store message in the session
         redirect_to(url_for('/staff/pages/show.php?id=' . $id));
     } else {
         $errors = $result;

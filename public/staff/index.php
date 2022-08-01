@@ -12,6 +12,7 @@
         <li><a href="<?php echo url_for('/staff/pages/index.php'); ?>" class="text-decoration-none">Pages</a></li>
         <li><a href="<?php echo url_for('/staff/subjects/index.php'); ?>" class="text-decoration-none">Subjects</a></li>
         <li><a href="<?php echo url_for('/staff/products/index.php'); ?>" class="text-decoration-none">Products</a></li>
+        <li><a href="<?php echo url_for('/staff/admins/index.php'); ?>" class="text-decoration-none">Admins</a></li>
     </ul>
 </div>
 

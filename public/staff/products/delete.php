@@ -9,6 +9,7 @@ $id = $_GET['id'];
 
 if(is_post_request()) {
     $result = delete_product($id);
+    $_SESSION['message'] = 'Product has been deleted.'; // store message in the session
     redirect_to(url_for('/staff/products/index.php'));
 } else {
     $product = find_product_by_id($id);

@@ -50,7 +50,7 @@ function is_get_request() {
 function display_errors($errors=array()) {
     $output = '';
     if(!empty($errors)) {
-        $output .= "<div class=\"errors\">";
+        $output .= "<div class=\"text-danger border border-2 border-danger px-3 pt-3 mb-3\">";
         $output .= "Please fix the following errors:";
         $output .= "<ul>";
         foreach($errors as $error) {
@@ -61,5 +61,20 @@ function display_errors($errors=array()) {
     }
     return $output;
 } 
+
+// Status messages
+function get_and_clear_session_message() {
+    if(isset($_SESSION['message']) && $_SESSION['message'] != '') {
+        $msg = $_SESSION['message'];
+        unset($_SESSION['message']);
+        return $msg;
+    }
+}
+function display_session_messages() {
+    $msg = get_and_clear_session_message();
+    if(!is_blank($msg)) {
+        return '<p class="text-success fs-5 text-center p-2 mx-3 mt-1 border border-2 border-success rounded">' . h($msg) . '</p>';
+    }
+}
 
 ?>
