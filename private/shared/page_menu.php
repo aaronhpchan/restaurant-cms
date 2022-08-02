@@ -14,7 +14,7 @@
                 <?php } ?>
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0<?php echo $i % 2 != 0 ? ' order-2 order-lg-1' : null; ?>">
-                <img class="img" src="<?php echo url_for('/images/menu_' . $subject['menu_name']) . '.jpg'; ?>" alt="<?php echo $subject['menu_name']; ?>" />
+                <img class="img" src="<?php echo url_for('/images/menu_' . strtolower($subject['menu_name'])) . '.jpg'; ?>" alt="<?php echo $subject['menu_name']; ?>" />
             </div>
         </div>
     <?php } ?>

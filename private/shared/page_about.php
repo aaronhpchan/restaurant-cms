@@ -16,7 +16,7 @@ $subject_set = find_subjects_by_page($id, ['visible' => $visible]);
                 <p class="about-p px-lg-4"><?php echo $value['content']; ?></p>
             </div>
             <div class="col-lg-6 <?php echo $i % 2 == 0 ? 'order-2 ps-lg-4' : 'order-2 order-lg-1 pe-lg-4'; ?>">
-                <img class="img" src="<?php echo url_for('/images/' . $page['menu_name'] . $value['position'] . '.jpg'); ?>" alt="<?php echo $subject['menu_name']; ?>" />
+                <img class="img" src="<?php echo url_for('/images/' . strtolower($page['menu_name']) . $value['position'] . '.jpg'); ?>" alt="<?php echo $subject['menu_name']; ?>" />
             </div>
         </div>
     <?php } ?>
