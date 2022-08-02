@@ -3,7 +3,6 @@
 <?php 
 
 $id = $_GET['id'] ?? '1';
-
 $page = find_page_by_id($id);
 
 ?> 

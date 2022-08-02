@@ -2,6 +2,8 @@
 
 require_once('../../../private/initialize.php'); 
 
+require_login();
+
 $page_set = find_all_pages();
 $page_count = mysqli_num_rows($page_set) + 1;
 mysqli_free_result($page_set);

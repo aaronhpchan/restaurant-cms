@@ -2,6 +2,8 @@
 
 require_once('../../../private/initialize.php');  
 
+require_login();
+
 if(is_post_request()) {
     $subject = [];
     $subject['page_id'] = $_POST['page_id'] ?? '';

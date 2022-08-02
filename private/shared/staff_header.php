@@ -22,7 +22,7 @@
             <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/pages/index.php') ?>">Pages</a></li>
             <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/subjects/index.php') ?>">Subjects</a></li>
             <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/products/index.php') ?>">Products</a></li>
-            <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo url_for('/staff/logout.php'); ?>">Logout</a></li>
+            <li class="d-inline mx-1 mx-sm-2"><a href="<?php echo is_logged_in() ? url_for('/staff/logout.php') : url_for('/staff/login.php'); ?>"><?php echo is_logged_in() ? 'Logout' : 'Login'; ?></a></li>
         </ul>
     </nav>
     <?php echo display_session_messages(); ?>
