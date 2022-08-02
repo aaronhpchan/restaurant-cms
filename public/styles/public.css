@@ -58,12 +58,12 @@ html, body{
 
 .img, .spinning-circle {
     border: 2px ridge #354230;
-    border-bottom: 3px groove #555555;
+    border-bottom: 3px solid #484942;
 }
 
 .img {
     border-radius: 55px;
-    border-right: 3px groove #555555;
+    border-right: 3px solid #484942;
     width: 100%;
 }
 
@@ -270,8 +270,8 @@ textarea {
 
 .card-light:hover {
     border: 2px ridge #354230;
-    border-bottom: 3px groove #555555;
-    border-right: 3px groove #555555;
+    border-bottom: 3px solid #484942;
+    border-right: 3px solid #484942;
     box-shadow: 1.5px 3.5px #3b3c36;
 }
 
